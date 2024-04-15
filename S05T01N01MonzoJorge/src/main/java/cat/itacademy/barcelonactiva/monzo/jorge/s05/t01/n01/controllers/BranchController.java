@@ -73,12 +73,12 @@ import java.util.List;
                 if (branchDTO != null) {
                     model.addAttribute("branchs", Arrays.asList(branchDTO));
                 } else {
-                    model.addAttribute("message", "Brnach with ID " + id + " not found.");
+                    model.addAttribute("message", "Branch with ID " + id + " not found.");
                 }
             } catch (NumberFormatException e) {
                 model.addAttribute("message", "Insert a valid ID");
             } catch (Exception e) {
-                model.addAttribute("message", "Office with id "+ branchId + " not found");
+                model.addAttribute("message", "Branch with id "+ branchId + " not found");
             }
             return new ModelAndView("branch/index", model.asMap());
         }
